@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceramah Berbayar: Pendaftaran Rasmi</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { line-height: 1.6; color: #333; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .komponen { margin-bottom: 40px; padding: 20px; border-radius: 8px; background: #f8f9fa; }
+        h1, h2 { color: #2c3e50; margin-bottom: 15px; }
+        .borang-seksyen { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); margin-bottom: 40px; }
+        .kumpulan-borang { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 500; }
+        input, select, button { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-size: 16px; }
+        input[type="checkbox"] { width: auto; margin-right: 10px; }
+        button { background: #27ae60; color: white; border: none; cursor: pointer; transition: background 0.3s; }
+        button:hover { background: #219653; }
+        .ralat { color: #dc3545; font-size: 14px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="komponen">
+            <h1>Web 3.0 & Teknologi Terkini: Bina Laman Web Canggih untuk Jaya di Era Digital</h1>
+        </section>
+
+        <section class="komponen">
+            <h2>Penceramah</h2>
+            <img src="penceramah.jpg" alt="Sabri bin Saep" style="width: 150px; border-radius: 50%; margin-bottom: 10px;">
+            <p><strong>Nama: </strong>Sabri bin Saep</p>
+            <p><strong>Jawatan: </strong>Pensyarah Kanan</p>
+            <p><strong>Kepakaran: </strong>Web Development & Cyber Security</p>
+        </section>
+
+        <section class="komponen">
+            <h2>Sinopsis</h2>
+            <p>Ceramah ini menghubungkan pengetahuan asas web dengan teknologi terkini seperti Web 3.0, AI untuk pengoptimuman laman web, dan pengembangan responsif yang berstandard industri. Peserta akan mempelajari cara merancang laman web yang berkelajuan tinggi, mesra pengguna, dan berdaya saing, serta memahami tren teknologi web yang akan mendominasi masa depan. Terutamanya untuk pelajar, pensyarah, dan profesional yang ingin meningkatkan kemahiran dalam bidang pembangunan web dan menjadikan produk digital lebih berkesan.</p>
+        </section>
+
+        <section class="komponen">
+            <h2>Logistik</h2>
+            <p><strong>Tarikh: </strong> 28 Julai 2026</p>
+            <p><strong>Masa: </strong>9.00 pagi – 4.00 petang</p>
+            <p><strong>Lokasi: </strong>Dewan Seri</p>
+        </section>
+
+        <section class="komponen">
+            <h2>Yuran</h2>
+            <p>RM 2,500.00 setiap slot (termasuk bahan ceramah, makan tengah hari, dan sijil penyertaan)</p>
+        </section>
+
+        <section class="komponen">
+            <h2>Hubungan</h2>
+            <p>E-mel: ceramah.projek@ptss.my</p>
+            <p>No. Telefon: +607-1234567</p>
+        </section>
+
+        <section class="borang-seksyen">
+            <h2>Daftar Sekarang</h2>
+            <form method="POST" action="pengesahan.php" id="borangPendaftaran">
+                <div class="kumpulan-borang">
+                    <label for="nama">Nama Penuh *</label>
+                    <input type="text" id="nama" name="nama" required>
+                    <div class="ralat" id="ralatNama"></div>
+                </div>
+
+                <div class="kumpulan-borang">
+                    <label for="email">Alamat E-mel *</label>
+                    <input type="email" id="email" name="email" required>
+                    <div class="ralat" id="ralatEmail"></div>
+                </div>
+
+                <div class="kumpulan-borang">
+                    <label for="telefon">Nombor Telefon *</label>
+                    <input type="text" id="telefon" name="telefon" required>
+                    <div class="ralat" id="ralatTelefon"></div>
+                </div>
+
+                <div class="kumpulan-borang">
+                    <label for="kategori">Kategori Peserta *</label>
+                    <select id="kategori" name="kategori" required>
+                        <option value="">Pilih Kategori</option>
+                        <option value="Pelajar">Pelajar</option>
+                        <option value="Pensyarah">Pensyarah</option>
+                        <option value="Orang Awam">Orang Awam</option>
+                        <option value="Korporat">Korporat</option>
+                    </select>
+                    <div class="ralat" id="ralatKategori"></div>
+                </div>
+
+                <div class="kumpulan-borang">
+                    <label for="slot">Bilangan Slot *</label>
+                    <input type="number" id="slot" name="slot" min="1" required>
+                    <div class="ralat" id="ralatSlot"></div>
+                </div>
+
+                <div class="kumpulan-borang">
+                    <input type="checkbox" id="termasyarat" name="termasyarat" required>
+                    <label for="termasyarat">Saya bersetuju dengan Terma & Syarat *</label>
+                    <div class="ralat" id="ralatTermasyarat"></div>
+                </div>
+
+                <button type="submit">Hantar Pendaftaran</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>
